@@ -1,0 +1,10 @@
+services: 
+  polkador:
+    build: polkadot
+    restart: unless-stopped
+    entrypoint: sleep 1000000000
+    volumes:
+      - ./polkadot/Data:/Data
+      - ./polkadot/Config:/Config
+      - ./polkadot/Tools:/Tools
+
